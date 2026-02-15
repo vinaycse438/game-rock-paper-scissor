@@ -1,57 +1,95 @@
 *{
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
 body{
     background-color: #3A9AFF;
     text-align: center;
 }
+
 h1{
     background-color:#081b31;
     color: white;
     line-height: 5rem;
 }
+
+/* choices container */
 .container{
-    height: 50vh;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
+    flex-wrap: wrap; /* mobile par wrap hoga */
 }
 
 .box{
     height: 150px;
-    width:  150px;
-    
+    width: 150px;
 }
+
 img{
     height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius:50%;
 }
+
 img:hover{
     cursor: pointer;
     border:5px solid black;
 }
 
+/* score board */
 .score-board{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
     font-size: 2rem;
+    flex-wrap: wrap;
 }
+
 .msg-cont{
     margin-top: 2rem;
 }
 
 #msg{
-    height: 40px;
     background-color: #081b31;
     color: white;
     font-size: 2rem;
-    display: inline;
+    display: inline-block;
     padding: 1rem;
     border-radius: 1rem;
+}
+
+/* -------- Responsive for Mobile -------- */
+@media (max-width: 600px) {
+
+    h1{
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .container{
+        gap: 2rem;
+    }
+
+    .box,
+    img{
+        height: 100px;
+        width: 100px;
+    }
+
+    .score-board{
+        gap: 2rem;
+        font-size: 1.5rem;
+    }
+
+    #msg{
+        font-size: 1.2rem;
+        padding: 0.7rem;
+    }
 }
